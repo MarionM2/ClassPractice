@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "datatable.dart";
 
 void main() {
   runApp(const MyApp());
@@ -30,16 +31,28 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      crossAxisCount: 2,
-      children: List.generate(8, (index) {
-        return Center(
-          child: Image.asset(
-        "assets/images/logo.jpeg",
-        height: 150,       
-      ),
-        );
-      }),
-    );
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('My App'),
+        ),
+        body: Center(
+          child: GridView.count(
+            crossAxisCount: 2,
+            children: List.generate(8, (index) {
+              return Center(
+                child: Image.asset(
+                  "assets/images/logo.jpeg",
+                  height: 150,
+                ),
+              );
+            }),
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            // Perform some action]
+          },
+          child: Text('Press'),
+        ));
   }
 }
