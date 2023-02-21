@@ -51,6 +51,8 @@ class _MyHomePageState extends State<MyHomePage> {
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             // Perform some action]
+            Navigator.pushReplacement(
+                context, MaterialPageRoute(builder: (_) => MyDataApp()));
           },
           child: Text('Press'),
         ));

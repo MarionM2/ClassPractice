@@ -46,7 +46,6 @@ class MyDataApp extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // Perform some action]
-          Navigator.pop(context, MaterialPageRoute(builder: (_) => MyApp()));
         },
         child: Text('Press'),
       ),
