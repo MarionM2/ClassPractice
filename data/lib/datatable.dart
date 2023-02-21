@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import "listview.dart";
 
 class MyDataApp extends StatelessWidget {
   final List<Map<String, dynamic>> _dataList = [
@@ -46,6 +46,8 @@ class MyDataApp extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // Perform some action]
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (_) => MyListApp()));
         },
         child: Text('Press'),
       ),
